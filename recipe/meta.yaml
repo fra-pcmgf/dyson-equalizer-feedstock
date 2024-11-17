@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python 3.10
     - flit-core
     - flit-scm
     - pip
@@ -24,6 +24,7 @@ requirements:
     - python >=3.10
     - matplotlib-base >=3.6
     - numpy >=1.25
+    - scipy >=1.13
 
 test:
   imports:
