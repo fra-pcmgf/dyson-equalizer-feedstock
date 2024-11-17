@@ -12,16 +12,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python 3.10
+    - python 3.11
     - flit-core
     - flit-scm
     - pip
   run:
-    - python >=3.10
+    - python >=3.11
     - matplotlib-base >=3.6
     - numpy >=1.25
     - scipy >=1.13
