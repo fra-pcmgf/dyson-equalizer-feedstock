@@ -1,5 +1,5 @@
 {% set name = "dyson-equalizer" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dyson_equalizer-{{ version }}.tar.gz
-  sha256: 9189bb6ac2fd6fc3a15b6f9af7da5dd7a4a6c401b7df7518cbbb746723c8f96b
+  sha256: ad6ea71eeb968a3071cdb041089c645ca1d78e1475625489487a276eac958879
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python 3.10
     - flit-core
     - flit-scm
     - pip
@@ -24,6 +24,7 @@ requirements:
     - python >=3.10
     - matplotlib-base >=3.6
     - numpy >=1.25
+    - scipy >=1.13
 
 test:
   imports:
