@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "dyson-equalizer" %}
 {% set version = "0.1.6" %}
 
@@ -12,16 +13,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python 3.11
+    - python {{ python_min }}
     - flit-core
     - flit-scm
     - pip
   run:
-    - python >=3.11
+    - python >={{ python_min }}
     - matplotlib-base >=3.6
     - numpy >=1.25
     - scipy >=1.13
@@ -33,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/KlugerLab/DysonEqualizer
