@@ -1,6 +1,6 @@
 {% set python_min = '3.11' %}
 {% set name = "dyson-equalizer" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dyson_equalizer-{{ version }}.tar.gz
-  sha256: ad6ea71eeb968a3071cdb041089c645ca1d78e1475625489487a276eac958879
+  sha256: 7eb9c48f7d45d12b0313fb931801c9a34cbec3ec0ca778eb9bdd89b36e9c46c0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
